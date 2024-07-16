@@ -1,7 +1,7 @@
 
  <?php
  include_once("config.php");
-
+echo "executing starthits";
 if($_SERVER['REQUEST_METHOD']=='POST'){
 
 $encrypted=$_POST['d1']; 
