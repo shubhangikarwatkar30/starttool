@@ -12,9 +12,9 @@ foreach( $arraydata as $d){
 }
 
 
-if(strlen($decrypted)==0)
+if(strlen($arraydata)==0)
 {
-echo "lets insert the data records";
+echo "lets insert the data records \n";
 }
 else
 {
