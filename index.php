@@ -1,6 +1,7 @@
 <?php
  include_once("config.php");
-echo "executing index";
+include_once("starthits.php");
+include_once("savefeedback.php");
 if($_SERVER['REQUEST_METHOD']=='POST'){
 
 $encrypted=$_POST['d1']; 
@@ -14,45 +15,12 @@ $iv = chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0)
 
 //decrypt the data
 $decrypted = openssl_decrypt(base64_decode($encrypted), $method, $password, OPENSSL_RAW_DATA, $iv);
- $arraydata = explode("," ,$decrypted);
-    $arr=array();
-    $i=0;
-    foreach( $arraydata as $d){
-        $arr[$i]= explode(":",$d)[1];
-    
-    $i++;
-    }
-
-
-if(strlen($decrypted)==0)
-{
-echo "lets insert the data records";
+$arraydata = explode("," ,$decrypted);
+savehits(  $arraydata); 
 }
-else
-{
- if(strlen($arr[1]) ==0 ){
-		$arr[1]='1.2';
-        
-	}
 
-//$Sql_Query = "INSERT INTO start_hits (hit_date,user_name,version) values(now(),'".$arr[0]."','".$arr[1]."')";
-	$Sql_Query = "INSERT INTO start_hits (hit_date,user_name,version) values(now(), 'testing', '1')";
-       echo "$Sql_Query" ;
- try {
-             $result = mysqli_query($conn,$Sql_Query);
-             if (!$result) {
-                 throw new Exception(mysqli_error($link));
-             }
-             else {
-                echo"record insert";
-             }
-         } catch (Exception $e) {
-             error_log($e->getMessage());
-         }
-}
-         mysqli_close($link);	
-         
- }
+
+
  ?>
  
  
