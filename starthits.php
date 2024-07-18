@@ -2,7 +2,7 @@
  <?php
 function savehits($arraydata){
  include_once("config.php");
-echo "executing starthits";
+echo "executing starthits \n";
 $arr=array();
 $i=0;
 foreach( $arraydata as $d){
@@ -11,7 +11,7 @@ foreach( $arraydata as $d){
    	 $i++;
 }
 echo "insert proper data \n";
-if(strlen($arraydata)==0){
+if(strlen($arraydata)<=0){
   echo "insert proper data \n";
 }
 else{
