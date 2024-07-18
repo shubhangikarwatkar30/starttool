@@ -10,15 +10,12 @@ foreach( $arraydata as $d){
     
    	 $i++;
 }
-
-
-if(strlen($arraydata)==0)
-{
-echo "lets insert proper data \n";
+echo "insert proper data \n";
+if(strlen($arraydata)==0){
+  echo "insert proper data \n";
 }
-else
-{
-	echo "lets insert the data records \n";
+else{
+echo "lets insert the data records \n";
  	if(strlen($arr[1]) ==0 ){
 		$arr[1]='1.2';
 	}
