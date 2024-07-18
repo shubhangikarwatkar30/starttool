@@ -11,7 +11,7 @@ foreach( $arraydata as $d){
    	 $i++;
 }
 
-if(6<=0){
+if(strlen($arraydata)<=0){
   echo "insert proper data \n";
 }
 else{
