@@ -13,7 +13,7 @@ foreach( $arraydata as $d){
    	 $i++;
 }
 
-if(strlen($arraydata)<=0){
+if(strlen($decrypted)==0){
   echo "insert proper data \n";
 }
 else{
