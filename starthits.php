@@ -23,7 +23,7 @@ echo "lets insert the data records \n";
 echo"above insert";	
 //$Sql_Query = "INSERT INTO start_hits (hit_date,user_name,version) values(now(),'".$arr[0]."','".$arr[1]."')";	
 $sql_Query="insrt into start_hits (hit_date,user_name,version) values (now(),'shubhangi','1.2')";	
-//echo $Sql_Query;
+echo $sql_Query;
  try {
 	 echo"above insert";
              $result = mysqli_query($conn,$Sql_Query);
