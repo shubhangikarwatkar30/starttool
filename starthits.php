@@ -9,7 +9,7 @@ $i=0;
 $arraydata = explode("," ,$decrypted);
 foreach( $arraydata as $d){
         $arr[$i]= explode(":",$d)[1];
-    
+    echo  $arr[$i];
    	 $i++;
 }
 
