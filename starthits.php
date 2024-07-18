@@ -3,13 +3,13 @@
 function savehits($decrypted){
  include_once("config.php");
  echo "executing starthits \n";
-echo $decrypted;
+echo $decrypted ."\n";
 $arr=array();
 $i=0;
 $arraydata = explode("," ,$decrypted);
 foreach( $arraydata as $d){
         $arr[$i]= explode(":",$d)[1];
-    echo  $arr[$i];
+    echo  $arr[$i]."\n";
    	 $i++;
 }
 
@@ -22,7 +22,7 @@ echo "lets insert the data records \n";
 		$arr[1]='1.2';
 	}
 
-echo"above insert";	
+echo"above insert \n";	
 //$Sql_Query = "INSERT INTO start_hits (hit_date,user_name,version) values(now(),'".$arr[0]."','".$arr[1]."')";	
 $Sql_Query="insert into start_hits (hit_date,user_name,version) values (now(),'shubhangi','1.2')";	
 echo $Sql_Query ."\n";
