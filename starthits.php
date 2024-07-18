@@ -28,6 +28,7 @@ echo $sql_Query;
 	 echo"above insert";
              $result = mysqli_query($conn,$Sql_Query);
              if (!$result) {
+		     echo"record not inserted";
                  throw new Exception(mysqli_error($link));
              }
              else {
