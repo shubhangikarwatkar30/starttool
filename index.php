@@ -1,5 +1,5 @@
 <?php
- include_once("config.php");
+// include_once("config.php");
 include_once("starthits.php");
 include_once("savefeedback.php");
 if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -16,7 +16,7 @@ $iv = chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0)
 //decrypt the data
 $decrypted = openssl_decrypt(base64_decode($encrypted), $method, $password, OPENSSL_RAW_DATA, $iv);
 $arraydata = explode("," ,$decrypted);
- echo $decrypted;
+// echo $decrypted;
 savehits( $decrypted); 
 }
 
