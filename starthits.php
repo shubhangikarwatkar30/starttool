@@ -25,9 +25,9 @@ echo"above insert";
 $Sql_Query="insert into start_hits (hit_date,user_name,version) values (now(),'shubhangi','1.2')";	
 echo $Sql_Query ."\n";
  try {
-	   echo"above insert \n";
+	   echo"in query execution \n";
              $result = mysqli_query($conn,$Sql_Query);
-	     echo"above insert \n";
+	     echo"after insert \n";
              if (!$result) {
 		     echo"record not inserted";
                  throw new Exception(mysqli_error($link));
