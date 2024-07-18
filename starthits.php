@@ -18,6 +18,7 @@ echo "lets insert the data records \n";
 }
 else
 {
+	echo "lets insert the data records \n";
  	if(strlen($arr[1]) ==0 ){
 		$arr[1]='1.2';
 	}
