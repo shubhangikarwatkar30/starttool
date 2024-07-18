@@ -1,10 +1,12 @@
 
  <?php
-function savehits($arraydata){
+function savehits($decrypted){
  include_once("config.php");
  echo "executing starthits \n";
+echo $decrypted;
 $arr=array();
 $i=0;
+$arraydata = explode("," ,$decrypted);
 foreach( $arraydata as $d){
         $arr[$i]= explode(":",$d)[1];
     
