@@ -21,7 +21,8 @@ else
  	if(strlen($arr[1]) ==0 ){
 		$arr[1]='1.2';
 	}
-$Sql_Query = "INSERT INTO start_hits (hit_date,user_name,version) values(now(),'".$arr[0]."','".$arr[1]."')";	
+//$Sql_Query = "INSERT INTO start_hits (hit_date,user_name,version) values(now(),'".$arr[0]."','".$arr[1]."')";	
+$sql_Query="insrt into start_hits (hit_date,user_name,version) values (now(),'shubhangi','1.2')";	
 echo "$Sql_Query" ;
  try {
              $result = mysqli_query($conn,$Sql_Query);
