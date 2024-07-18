@@ -10,7 +10,7 @@ foreach( $arraydata as $d){
     
    	 $i++;
 }
-/*echo "insert proper data \n";
+
 if(strlen($arraydata)<=0){
   echo "insert proper data \n";
 }
@@ -19,15 +19,15 @@ echo "lets insert the data records \n";
  	if(strlen($arr[1]) ==0 ){
 		$arr[1]='1.2';
 	}
-}*/
+
 echo"above insert";	
 //$Sql_Query = "INSERT INTO start_hits (hit_date,user_name,version) values(now(),'".$arr[0]."','".$arr[1]."')";	
 $Sql_Query="insert into start_hits (hit_date,user_name,version) values (now(),'shubhangi','1.2')";	
-echo $Sql_Query;
+echo $Sql_Query ."\n";
  try {
-	   echo"above insert";
+	   echo"above insert \n";
              $result = mysqli_query($conn,$Sql_Query);
-	     echo"above insert";
+	     echo"above insert \n";
              if (!$result) {
 		     echo"record not inserted";
                  throw new Exception(mysqli_error($link));
@@ -38,7 +38,7 @@ echo $Sql_Query;
          } catch (Exception $e) {
              error_log($e->getMessage());
          }
-
+}
          mysqli_close($link);	
          
  }
