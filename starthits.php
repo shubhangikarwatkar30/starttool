@@ -23,8 +23,8 @@ echo "lets insert the data records \n";
 	}
 
 echo"above insert \n";	
-//$Sql_Query = "INSERT INTO start_hits (hit_date,user_name,version) values(now(),'".$arr[0]."','".$arr[1]."')";	
-$Sql_Query="insert into start_hits (hit_date,user_name,version) values (now(),'shubhangi','1.2')";	
+$Sql_Query = "INSERT INTO start_hits (hit_date,user_name,version) values(now(),'".$arr[0]."','".$arr[1]."')";	
+//$Sql_Query="insert into start_hits (hit_date,user_name,version) values (now(),'shubhangi','1.2')";	
 echo $Sql_Query ."\n";
  try {
 	   echo"in query execution \n";
