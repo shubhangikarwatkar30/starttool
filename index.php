@@ -21,21 +21,23 @@ $lastElement = end(explode('-', $decrypted));
  echo $lastElement;
 switch ($lastElement){
  case "save_hits":
- echo"case statement";"
-  savehits( $decrypted);
+   echo $lastElement;
+   savehits( $decrypted);
  break;
  case "save_feedback":
- 
+    echo $lastElement;
  break;
-  case "save_execution":
- 
+case "save_execution":
+  echo $lastElement;
  break;
-  case "save_incidents":
+case "save_incidents":
+   echo $lastElement;
  break;
   case "get_category":
+   echo $lastElement;
  break;
  default:
- echo"end case";
+    echo"end case";
 }
 
 }
