@@ -2,14 +2,13 @@
  <?php
 function savehits($decrypted){
  include_once("config.php");
- echo "executing starthits \n";
-echo $decrypted ."\n";
+
 $arr=array();
 $i=0;
 $arraydata = explode("," ,$decrypted);
 foreach( $arraydata as $d){
         $arr[$i]= explode(":",$d)[1];
-    echo  $arr[$i]."\n";
+   
    	 $i++;
 }
 
@@ -17,7 +16,7 @@ if(strlen($decrypted)==0){
   echo "insert proper data \n";
 }
 else{
-echo "lets insert the data records \n";
+
  	if(strlen($arr[1]) ==0 ){
 		$arr[1]='1.2';
 	}
