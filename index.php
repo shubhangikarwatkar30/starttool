@@ -18,7 +18,7 @@ $decrypted = openssl_decrypt(base64_decode($encrypted), $method, $password, OPEN
 $arraydata = explode("," ,$decrypted);
  
 $lastElement = end(explode('-', $decrypted));
- echo $lastElement;
+ 
 switch ($lastElement){
  case "save_hits":
    echo $lastElement;
