@@ -19,7 +19,7 @@ $arraydata = explode("," ,$decrypted);
 //echo $decrypted;
 $lastElement = end(explode('-', $decrypted));
 echo $lastElement\n;
-switch ($lastElement)
+/*switch ($lastElement)
 {
  case "save_hits":
    savehits( $decrypted);
@@ -39,7 +39,7 @@ case "save_incidents":
  default:
     echo"end case";
 }
-
+*/
 }
 
 
