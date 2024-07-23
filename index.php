@@ -3,7 +3,7 @@
 include_once("starthits.php");
 include_once("savefeedback.php");
 if($_SERVER['REQUEST_METHOD']=='POST'){
-echo "in index \n";
+ echo "in index \n";
 $encrypted=$_POST['d1']; 
 $password = '8R@13#s34Af';
 $method = 'aes-256-cbc';
@@ -15,7 +15,7 @@ $iv = chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0)
 //decrypt the data
 $decrypted = openssl_decrypt(base64_decode($encrypted), $method, $password, OPENSSL_RAW_DATA, $iv);
 $arraydata = explode("," ,$decrypted);
-//echo $decrypted;
+echo $decrypted;
 $lastElement =trim( end( $arraydata));
 //echo $lastElement;
 switch ($lastElement){
