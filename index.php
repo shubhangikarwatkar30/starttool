@@ -16,8 +16,8 @@ $iv = chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0)
 $decrypted = openssl_decrypt(base64_decode($encrypted), $method, $password, OPENSSL_RAW_DATA, $iv);
 $arraydata = explode("," ,$decrypted);
 echo $decrypted;
-$lastElement = end(explode(',', $decrypted));
-echo $lastElement\n;
+//$lastElement = end(explode(',', $decrypted));
+//echo $lastElement\n;
 switch ($lastElement)
 {
  case "save_hits":
