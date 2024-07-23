@@ -1,4 +1,4 @@
- <?php
+
 function savefeedback($decrypted){
 include_once("config.php");
  echo "in feedback";
@@ -54,7 +54,7 @@ if(strlen($encrypted)>37){
          
  }
 }
- ?>
+
  
  
  
