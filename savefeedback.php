@@ -1,9 +1,10 @@
  <?php
-function savefeedback($arraydata){
+function savefeedback($decrypted){
 include_once("config.php");
  echo "in feedback";
 $arr=array();
 $i=0;
+$arraydata = explode("," ,$decrypted);
 foreach( $arraydata as $d){
     $arr[$i]= explode(":",$d)[1];
 
