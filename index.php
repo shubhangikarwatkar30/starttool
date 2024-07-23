@@ -19,10 +19,10 @@ echo $decrypted;
 $lastElement = end( $arraydata);
 //echo $lastElement;
 switch ($lastElement){
- case "save_hits":
+ case "save_feedback":
    savehits( $decrypted);
  break;
- case "save_feedback":
+ case "save_hits":
     echo $lastElement;
  break;
 case "save_execution":
