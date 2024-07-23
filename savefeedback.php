@@ -1,4 +1,4 @@
-<?php
+ <?php
 function savefeedback($arraydata){
 include_once("config.php");
 $arr=array();
@@ -9,7 +9,8 @@ foreach( $arraydata as $d){
 $i++;
 }
 
-
+echo $arraydata \n;
+print_r ( $arr);
 if(strlen($arr[5])==0 || strlen($arr[2])==0 || strlen($arr[3])==0 ||strlen($arr[1])==0 || strlen($arr[0])==0)
 {
 echo "please insert proper data";
