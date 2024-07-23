@@ -15,7 +15,7 @@ $iv = chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0)
 //decrypt the data
 $decrypted = openssl_decrypt(base64_decode($encrypted), $method, $password, OPENSSL_RAW_DATA, $iv);
 $arraydata = explode("," ,$decrypted);
-echo $decrypted;
+//echo $decrypted;
 $lastElement =trim( end( $arraydata));
 echo $lastElement;
 switch ($lastElement){
@@ -23,8 +23,8 @@ switch ($lastElement){
    savehits( $decrypted);
  break;
  case "save_feedback":
-   //  savefeedback($decrypted);
- echo "call feedback";
+   savefeedback($decrypted);
+ //echo "call feedback";
  break;
 case "save_execution":
   echo $lastElement;
