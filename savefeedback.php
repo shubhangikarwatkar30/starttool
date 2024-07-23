@@ -1,6 +1,7 @@
  <?php
 function savefeedback($arraydata){
 include_once("config.php");
+ echo "in feedback";
 $arr=array();
 $i=0;
 foreach( $arraydata as $d){
@@ -8,7 +9,7 @@ foreach( $arraydata as $d){
 
 $i++;
 }
-echo "in feedback";
+
 echo $arraydata \n;
 print_r ( $arr);
 if(strlen($arr[5])==0 || strlen($arr[2])==0 || strlen($arr[3])==0 ||strlen($arr[1])==0 || strlen($arr[0])==0)
