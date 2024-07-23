@@ -8,7 +8,7 @@ foreach( $arraydata as $d){
 
 $i++;
 }
-
+echo "in feedback";
 echo $arraydata \n;
 print_r ( $arr);
 if(strlen($arr[5])==0 || strlen($arr[2])==0 || strlen($arr[3])==0 ||strlen($arr[1])==0 || strlen($arr[0])==0)
