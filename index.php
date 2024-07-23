@@ -17,13 +17,13 @@ $decrypted = openssl_decrypt(base64_decode($encrypted), $method, $password, OPEN
 $arraydata = explode("," ,$decrypted);
 echo $decrypted;
 $lastElement =trim( end( $arraydata));
-//echo $lastElement;
+echo $lastElement;
 switch ($lastElement){
  case "save_hits":
    savehits( $decrypted);
  break;
  case "save_feedback":
-    savefeedback($decrypted);
+   //  savefeedback($decrypted);
  echo "call feedback";
  break;
 case "save_execution":
