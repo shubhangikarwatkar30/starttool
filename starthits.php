@@ -1,5 +1,4 @@
 
- <?php
 function savehits($decrypted){
  include_once("config.php");
 
@@ -42,7 +41,6 @@ echo $Sql_Query ."\n";
          mysqli_close($link);	
          
  }
- ?>
  
  
  
