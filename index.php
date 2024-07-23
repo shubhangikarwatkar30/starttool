@@ -1,7 +1,7 @@
 <?php
 
-//include_once("starthits.php");
-//include_once("savefeedback.php");
+include_once("starthits.php");
+include_once("savefeedback.php");
 if($_SERVER['REQUEST_METHOD']=='POST'){
  echo "in index";
 $encrypted=$_POST['d1']; 
