@@ -11,7 +11,7 @@ $method = 'aes-256-cbc';
 
 }
 */
-echo"hih";
+echo "hih";
 
 
  ?>
