@@ -23,7 +23,7 @@ switch ($lastElement){
    savehits( $decrypted);
  break;
  case "save_feedback":
-   // savefeedback($decrypted);
+    savefeedback($decrypted);
  echo "call feedback";
  break;
 case "save_execution":
