@@ -1,7 +1,7 @@
 <?php
 function savefeedback($decrypted){
 include_once("config.php");
- echo "$decrypted";
+
 $arr=array();
 $i=0;
 $arraydata = explode("," ,$decrypted);
@@ -38,9 +38,13 @@ echo "$Sql_Query" ;
 if(strlen($encrypted)>37){
 
  try {
+             echo"before query"
              $result = mysqli_query($conn,$Sql_Query);
+             echo"after query"
              if (!$result) {
+                   echo"record not inserted";
                  throw new Exception(mysqli_error($link));
+   echo"record inserted";
              }
              else {
                 echo"record inserted";
