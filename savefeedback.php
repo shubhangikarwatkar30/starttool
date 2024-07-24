@@ -38,7 +38,7 @@ echo "$Sql_Query" ;
 if(strlen($encrypted)>37){
 
  try {
-             $result = mysqli_query($link,$Sql_Query);
+             $result = mysqli_query($conn,$Sql_Query);
              if (!$result) {
                  throw new Exception(mysqli_error($link));
              }
