@@ -38,9 +38,9 @@ echo "$Sql_Query" ;
 if(strlen($encrypted)>37){
 
  try {
-             echo"before query"
+             echo"before query";
              $result = mysqli_query($conn,$Sql_Query);
-             echo"after query"
+             echo"after query";
              if (!$result) {
                    echo"record not inserted";
                  throw new Exception(mysqli_error($link));
