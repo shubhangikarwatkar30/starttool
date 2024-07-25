@@ -1,9 +1,4 @@
 <?php
-$dbhost = "starttooldev01.mysql.database.azure.com";
-$dbname = "startdb";
-$dbuser = "srtadmin01";
-$dbpass ="Ugw6h1daE5";
-$conn = mysqli_init();
 
 mysqli_real_connect($conn, 'starttooldev01.mysql.database.azure.com', 'srtadmin01', 'Ugw6h1daE5', 'startdb', 3306, MYSQLI_CLIENT_SSL);
 
