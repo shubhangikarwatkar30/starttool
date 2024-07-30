@@ -1,6 +1,5 @@
  <?php
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+function getcat()
  include_once("config.php");
 
 if($_SERVER['REQUEST_METHOD']=='GET'){
@@ -14,8 +13,7 @@ $password = substr(hash('sha256', $password, true), 0, 32);
 // IV must be exact 16 chars (128 bit)
 $iv = chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0);
 
-// av3DYGLkwBsErphcyYp+imUW4QKs19hUnFyyYcXwURU=
-//
+
 
 //$arraydata = explode("," ,$decrypted);
 $arr=array();
@@ -25,7 +23,7 @@ $posts=array();
 $Sql_Query = "select * from category_details";
 
  try {
-$result = mysqli_query($link, $Sql_Query);
+$result = mysqli_query($conn, $Sql_Query);
              if (mysqli_num_rows($result) > 0) {
   // output data of each row
  		while($row =mysqli_fetch_assoc($result))
