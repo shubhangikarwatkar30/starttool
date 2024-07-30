@@ -27,7 +27,7 @@ switch ($lastElement){
  //echo "call feedback";
  break;
 case "save_execution":
-  echo $lastElement;
+   savelog($decrypted);
  break;
 case "save_incidents":
    echo $lastElement;
