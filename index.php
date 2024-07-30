@@ -32,8 +32,8 @@ case "save_execution":
 case "save_incidents":
    echo $lastElement;
  break;
-  case "get_category":
-   echo $lastElement;
+  case "get_cat":
+  getcat();
  break;
  default:
     echo"end case";
