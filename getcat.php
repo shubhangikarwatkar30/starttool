@@ -2,9 +2,6 @@
 function getcat()
  include_once("config.php");
 
-if($_SERVER['REQUEST_METHOD']=='GET'){
-
-//$encrypted=$_POST['d1']; 
 $password = '8R@13#s34Af';
 $method = 'aes-256-cbc';
 
@@ -13,9 +10,6 @@ $password = substr(hash('sha256', $password, true), 0, 32);
 // IV must be exact 16 chars (128 bit)
 $iv = chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0);
 
-
-
-//$arraydata = explode("," ,$decrypted);
 $arr=array();
 $i=0;
 $posts=array();
