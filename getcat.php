@@ -1,5 +1,5 @@
  <?php
-function getcat()
+function getcat(){
  include_once("config.php");
 
 $password = '8R@13#s34Af';
