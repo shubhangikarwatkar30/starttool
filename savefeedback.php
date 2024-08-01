@@ -1,7 +1,7 @@
 <?php
 function savefeedback($decrypted){
 include_once("config.php");
-
+echo"feedback";
 $arr=array();
 $i=0;
 $arraydata = explode("," ,$decrypted);
