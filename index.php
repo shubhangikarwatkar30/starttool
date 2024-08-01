@@ -35,6 +35,7 @@ case "save_incidents":
  break;
 case "get_cat":
   getcat();
+  echo $lastElement;
  break;
 default:
     echo"end case";
