@@ -21,7 +21,7 @@ $lastElement =trim( end( $arraydata));
 echo $decrypted;
 switch ($lastElement){
  case "save_hits":
-   savehits( $decrypted);
+   savehits($decrypted);
  break;
  case "save_feedback":
   echo "calling feedback";
