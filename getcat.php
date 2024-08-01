@@ -1,7 +1,7 @@
  <?php
 function getcat(){
  include_once("config.php");
-
+echo"get category \n";
 $password = '8R@13#s34Af';
 $method = 'aes-256-cbc';
 
