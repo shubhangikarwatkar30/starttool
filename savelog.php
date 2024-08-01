@@ -1,5 +1,5 @@
  <?php
-function savelogs($encrypted){
+function savelogs($decrypted){
 
 echo "$decrypted"; 
 $arraydata = explode("," ,$decrypted);
