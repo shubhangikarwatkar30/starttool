@@ -1,19 +1,15 @@
  <?php
-function getcat(){
+function getcat()
+{
  include_once("config.php");
-echo"get category \n";
-$password = '8R@13#s34Af';
-$method = 'aes-256-cbc';
-
-// Must be exact 32 chars (256 bit)
-$password = substr(hash('sha256', $password, true), 0, 32);
-// IV must be exact 16 chars (128 bit)
+ echo "get category \n";
+ $password = '8R@13#s34Af';
+ $method = 'aes-256-cbc';
+ $password = substr(hash('sha256', $password, true), 0, 32);
 $iv = chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0);
-
 $arr=array();
 $i=0;
 $posts=array();
-
 $Sql_Query = "select * from category_details";
 echo $Sql_Query;
  try {
@@ -34,9 +30,8 @@ $result = mysqli_query($conn, $Sql_Query);
          }
          mysqli_close($link);
          $plaintext=json_encode(array($posts));
-       	
          $encrypted = base64_encode(openssl_encrypt($plaintext, $method, $password, OPENSSL_RAW_DATA, $iv)); 
-       echo "$encrypted";
+       	echo "$encrypted";
 
         }
  ?>
