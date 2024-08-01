@@ -19,6 +19,7 @@ $result = mysqli_query($conn, $Sql_Query);
  		while($row =mysqli_fetch_assoc($result))
     {
         $posts[] = $row;
+	    echo $row; 
     }
  		//echo json_encode(array($posts));
 	} else {
