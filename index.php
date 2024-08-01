@@ -25,7 +25,7 @@ switch ($lastElement){
  break;
  case "save_feedback":
   echo "calling feedback";
-   savefeedback($decrypted);
+  echo savefeedback($decrypted);
     echo "called feedback";
  break;
 case "save_execution":
