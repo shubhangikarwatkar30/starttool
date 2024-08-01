@@ -21,7 +21,7 @@ $result = mysqli_query($conn, $Sql_Query);
         $posts[] = $row;
 	    
     }
- 	echo json_encode(array($posts));
+ 	//echo json_encode(array($posts));
 	} else {
   		echo "0 results";
                
@@ -33,7 +33,7 @@ $result = mysqli_query($conn, $Sql_Query);
          mysqli_close($link);
          $plaintext=json_encode(array($posts));
          $encrypted = base64_encode(openssl_encrypt($plaintext, $method, $password, OPENSSL_RAW_DATA, $iv)); 
-       	echo "$encrypted";
+       	echo $encrypted;
 
         }
  ?>
