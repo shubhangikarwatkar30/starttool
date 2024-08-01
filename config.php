@@ -7,7 +7,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 die('Failed to connect to MySQL: '.mysqli_connect_error());
 exit();
 }else{
-echo "db connected";	
+//echo "db connected";	
 }
 
 ?>
