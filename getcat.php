@@ -2,7 +2,7 @@
 function getcat()
 {
  include_once("config.php");
- echo "get category \n";
+// echo "get category \n";
  $password = '8R@13#s34Af';
  $method = 'aes-256-cbc';
  $password = substr(hash('sha256', $password, true), 0, 32);
@@ -11,11 +11,11 @@ $arr=array();
 $i=0;
 $posts=array();
 $Sql_Query = "select * from category_details";
-echo $Sql_Query;
+//echo $Sql_Query;
  try {
 $result = mysqli_query($conn, $Sql_Query);
              if (mysqli_num_rows($result) > 0) {
-  echo"output data of each row";
+//  echo"output data of each row";
  		while($row =mysqli_fetch_assoc($result))
     {
         $posts[] = $row;
