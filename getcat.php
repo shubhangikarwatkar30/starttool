@@ -13,7 +13,9 @@ $posts=array();
 $Sql_Query = "select * from category_details";
 
  try {
-$result = mysqli_query($conn, $Sql_Query);
+$response = mysqli_query($conn, $Sql_Query);
+$result = str_replace("\n", "", $response);	 
+	 
              if (mysqli_num_rows($result) > 0) {
 
  		while($row =mysqli_fetch_assoc($result))
