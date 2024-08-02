@@ -5,7 +5,7 @@ include_once("savefeedback.php");
 include_once("getcat.php");
 include_once("savelog.php");
 if($_SERVER['REQUEST_METHOD']=='POST'){
-// echo "in index";
+
 $encrypted=$_POST['d1']; 
 $password = '8R@13#s34Af';
 $method = 'aes-256-cbc';
@@ -18,15 +18,15 @@ $iv = chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0)
 $decrypted = openssl_decrypt(base64_decode($encrypted), $method, $password, OPENSSL_RAW_DATA, $iv);
 $arraydata = explode("," ,$decrypted);
 $lastElement =trim( end( $arraydata));
-//echo $decrypted;
+
 switch ($lastElement){
  case "save_hits":
    savehits($decrypted);
  break;
  case "save_feedback":
- // echo "calling feedback";
+
   echo savefeedback($decrypted);
-   // echo "called feedback";
+ 
  break;
 case "save_execution":
    savelog($decrypted);
@@ -36,7 +36,7 @@ case "save_incidents":
  break;
 case "get_cat":
   getcat();
-  //echo $lastElement;
+ 
  break;
 default:
     echo"end case";
