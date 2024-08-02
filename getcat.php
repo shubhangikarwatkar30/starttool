@@ -34,7 +34,9 @@ $result = mysqli_query($conn, $Sql_Query);
          $plaintext=json_encode(array($posts));
          $encrypted = base64_encode(openssl_encrypt($plaintext, $method, $password, OPENSSL_RAW_DATA, $iv)); 
 	 $cat=trim($encrypted," \n\t.");
-       	 echo $cat;
+       	 echo str_replace($cat,""\r\n","");
+
+
 
         }
  ?>
