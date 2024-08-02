@@ -21,12 +21,11 @@ else{
 	}
 
 $Sql_Query = "INSERT INTO start_hits (hit_date,user_name,version) values(now(),'".$arr[0]."','".$arr[1]."')";	
-//$Sql_Query="insert into start_hits (hit_date,user_name,version) values (now(),'shubhangi','1.2')";	
-echo $Sql_Query ."\n";
+
  try {
-	   echo"in query execution \n";
+	   
              $result = mysqli_query($conn,$Sql_Query);
-	     echo"after insert \n";
+	     
              if (!$result) {
 		     echo"record not inserted";
                  throw new Exception(mysqli_error($link));
