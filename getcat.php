@@ -13,8 +13,8 @@ $posts=array();
 $Sql_Query = "select * from category_details";
 
  try {
-$response = mysqli_query($conn, $Sql_Query);
-$result = str_replace("\n", "", $response);	 
+$result = mysqli_query($conn, $Sql_Query);
+//$result = str_replace("\n", "", $response);	 
 	 
              if (mysqli_num_rows($result) > 0) {
 
