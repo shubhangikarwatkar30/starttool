@@ -33,7 +33,7 @@ $result = mysqli_query($conn, $Sql_Query);
          mysqli_close($conn);
          $plaintext=json_encode(array($posts));
          $encrypted = base64_encode(openssl_encrypt($plaintext, $method, $password, OPENSSL_RAW_DATA, $iv)); 
-	 $cat=trim($encrypted);
+	 $cat=trim($encrypted," \n\t.");
        	 echo $cat;
 
         }
