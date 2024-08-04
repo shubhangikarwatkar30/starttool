@@ -35,7 +35,7 @@ $result = mysqli_query($conn, $Sql_Query);
          $plaintext=json_encode($posts);
          $encrypted = base64_encode(openssl_encrypt($plaintext, $method, $password, OPENSSL_RAW_DATA, $iv)); 
 	 $cat=trim($encrypted);
-	 print_r($posts);
+	echo "Test";
        	
         }
  ?>
