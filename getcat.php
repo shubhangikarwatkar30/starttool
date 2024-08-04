@@ -40,6 +40,7 @@ $result = mysqli_query($conn, $Sql_Query);
 */
        	
         }
+?>
 
  
  
