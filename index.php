@@ -1,5 +1,4 @@
 <?php
-
 include_once("starthits.php");
 include_once("savefeedback.php");
 include_once("getcat.php");
@@ -41,13 +40,6 @@ case "get_cat":
 default:
     echo"end case";
 }
-
-
-
-
-
-
-
 }
  ?>
  
