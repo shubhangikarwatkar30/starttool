@@ -2,7 +2,7 @@
 function getcat()
 {
 		echo "Test 2";
-	
+	exit;
  /*include_once("config.php");
 
  $password = '8R@13#s34Af';
