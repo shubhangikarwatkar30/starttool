@@ -53,6 +53,3 @@ $Sql_Query = "INSERT INTO feedback (user_name ,location,category,sub_category,ra
          
  }
 }
-?>
- 
- 
