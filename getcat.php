@@ -1,7 +1,9 @@
  <?php
 function getcat()
 {
- include_once("config.php");
+		echo "Test";
+	
+ /*include_once("config.php");
 
  $password = '8R@13#s34Af';
  $method = 'aes-256-cbc';
@@ -35,7 +37,7 @@ $result = mysqli_query($conn, $Sql_Query);
          $plaintext=json_encode($posts);
          $encrypted = base64_encode(openssl_encrypt($plaintext, $method, $password, OPENSSL_RAW_DATA, $iv)); 
 	 $cat=trim($encrypted);
-	echo "Test";
+*/
        	
         }
  ?>
