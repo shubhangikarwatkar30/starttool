@@ -1,7 +1,7 @@
  <?php
 function getcat()
 {
-		echo "Test";
+		echo "Test 2";
 	
  /*include_once("config.php");
 
