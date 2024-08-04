@@ -40,8 +40,4 @@ $Sql_Query = "INSERT INTO start_hits (hit_date,user_name,version) values(now(),'
          mysqli_close($link);	
          
  }
- 
- 
- 
- 
 ?>
