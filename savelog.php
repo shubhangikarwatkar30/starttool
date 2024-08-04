@@ -29,8 +29,3 @@ $Sql_Query = "INSERT INTO executionLog (userName, category, subCategory, executi
          mysqli_close($link);	
          
  }
- ?>
- 
- 
- 
- 
