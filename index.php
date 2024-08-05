@@ -28,7 +28,7 @@ switch ($lastElement){
  
  break;
 case "save_execution":
-   savelog($decrypted);
+   savelogs($decrypted);
  break;
 case "save_incidents":
    echo $lastElement;
