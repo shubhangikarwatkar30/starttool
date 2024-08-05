@@ -1,5 +1,6 @@
  <?php
 function savelogs($decrypted){
+include_once("config.php");
 $arraydata = explode("," ,$decrypted);
 $arr=array();
 $i=0;
@@ -12,6 +13,7 @@ $Sql_Query = "INSERT INTO executionLog (userName, category, subCategory, executi
  try {
               echo " in try". $Sql_Query;
              $result = mysqli_query($conn,$Sql_Query);
+             
              if (!$result) {
                  echo"record not inserted";
                  throw new Exception(mysqli_error($conn));
