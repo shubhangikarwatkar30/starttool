@@ -17,7 +17,7 @@ $Sql_Query = "INSERT INTO executionLog (userName, category, subCategory, executi
  try {
              $result = mysqli_query($conn,$Sql_Query);
              if (!$result) {
-                 throw new Exception(mysqli_error($link));
+                 throw new Exception(mysqli_error($conn));
              }
              else {
                 echo"record inserted";
@@ -26,6 +26,6 @@ $Sql_Query = "INSERT INTO executionLog (userName, category, subCategory, executi
              error_log($e->getMessage());
          }
 
-         mysqli_close($link);	
+         mysqli_close($conn);	
          
  }
