@@ -13,10 +13,12 @@ $i++;
 
 
 $Sql_Query = "INSERT INTO executionLog (userName, category, subCategory, execution_date) values('".$arr[2]."','".$arr[1]."','".$arr[0]."',now())";
-       echo "$Sql_Query" ;
+      
  try {
+              echo "$Sql_Query" ;
              $result = mysqli_query($conn,$Sql_Query);
              if (!$result) {
+                 echo"record not inserted";
                  throw new Exception(mysqli_error($conn));
              }
              else {
