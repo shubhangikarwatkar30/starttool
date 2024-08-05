@@ -25,7 +25,7 @@ $Sql_Query = "INSERT INTO start_hits (hit_date,user_name,version) values(now(),'
  try {
 	   
              $result = mysqli_query($conn,$Sql_Query);
-	     
+	     echo "after query";
              if (!$result) {
 		     echo"record not inserted";
                  throw new Exception(mysqli_error($link));
