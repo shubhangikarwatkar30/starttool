@@ -1,14 +1,7 @@
  <?php
 function freedata($decrypted){
 include_once("config.php");
-$arraydata = explode("," ,$decrypted);
-$arr=array();
-$i=0;
-foreach( $arraydata as $d){
-    $arr[$i]= explode(":",$d)[1];
-
-$i++;
-}
+$arr = explode("," ,$decrypted);
 $Sql_Query = "INSERT INTO freedisk_data (user_name, execution_date, space_free) values('".$arr[0]."', now(),".$arr[1]. ")";   
 echo $Sql_Query;
  try {
