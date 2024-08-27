@@ -13,12 +13,12 @@ $method = 'aes-256-cbc';
 $password = substr(hash('sha256', $password, true), 0, 32);
 // IV must be exact 16 chars (128 bit)
 $iv = chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0);
-
+echo $encrypted;
 //decrypt the data
 $decrypted = openssl_decrypt(base64_decode($encrypted), $method, $password, OPENSSL_RAW_DATA, $iv);
 $arraydata = explode("," ,$decrypted);
 $lastElement =trim( end( $arraydata));
-echo $encrypted;
+
 echo $decrypted;
 switch ($lastElement){
  case "save_hits":
