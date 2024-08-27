@@ -39,6 +39,7 @@ case "get_cat":
  
  break;
  case "freedisk":
+ echo "in data";
  freedata($decrypted);
  break;
 default:
