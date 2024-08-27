@@ -10,7 +10,7 @@ foreach( $arraydata as $d){
 $i++;
 }
 $Sql_Query = "INSERT INTO freedisk_data (user_name, execution_date, space_free) values('".$arr[0]."', now(),".$arr[1]. ")";   
-echo $Sql_Query";
+echo $Sql_Query;
  try {
               echo " in try". $Sql_Query;
              $result = mysqli_query($conn,$Sql_Query);
