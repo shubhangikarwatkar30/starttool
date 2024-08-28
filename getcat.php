@@ -1,6 +1,7 @@
  <?php
 function getcat()
 {
+echo "in cat.php";
 include_once("config.php");
 echo "in cat.php";
  $password = '8R@13#s34Af';
