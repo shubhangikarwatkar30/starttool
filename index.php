@@ -3,7 +3,7 @@ include_once("starthits.php");
 include_once("savefeedback.php");
 include_once("getcat.php");
 include_once("savelog.php");
-
+include_once("freedata");
 if($_SERVER['REQUEST_METHOD']=='POST'){
 
 $encrypted=$_POST['d1']; 
@@ -36,6 +36,9 @@ case "save_incidents":
 case "get_cat":
  //echo "get cat";
  getcat();
+ break;
+ case "freedisk":
+ freedata($decrypted);
  break;
 default:
     echo"end case";
