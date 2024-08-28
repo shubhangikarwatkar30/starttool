@@ -25,9 +25,7 @@ switch ($lastElement){
    savehits($decrypted);
  break;
  case "save_feedback":
-
   savefeedback($decrypted);
- 
  break;
 case "save_execution":
    savelogs($decrypted);
