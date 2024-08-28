@@ -2,7 +2,7 @@
 function getcat()
 {
 include_once("config.php");
-
+echo "in cat.php";
  $password = '8R@13#s34Af';
  $method = 'aes-256-cbc';
  $password = substr(hash('sha256', $password, true), 0, 32);
