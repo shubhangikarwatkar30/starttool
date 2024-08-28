@@ -19,7 +19,7 @@ $decrypted = openssl_decrypt(base64_decode($encrypted), $method, $password, OPEN
 $arraydata = explode("," ,$decrypted);
 $lastElement =trim( end( $arraydata));
 
-echo $decrypted;
+//echo $decrypted;
 switch ($lastElement){
  case "save_hits":
    savehits($decrypted);
