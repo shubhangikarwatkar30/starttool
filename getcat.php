@@ -12,7 +12,7 @@ $arr=array();
 $i=0;
 $posts=array();
 $Sql_Query = "select * from category_details";
-echo $Sql_Query;
+
  try {
 $result = mysqli_query($conn, $Sql_Query);
 
