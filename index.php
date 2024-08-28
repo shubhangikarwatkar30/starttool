@@ -34,6 +34,7 @@ case "save_incidents":
    echo $lastElement;
  break;
 case "get_cat":
+ echo "get cal";
   getcat();
   break;
 default:
